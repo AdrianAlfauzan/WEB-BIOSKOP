@@ -1,0 +1,171 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper span {
+  position: fixed;
+  top: -2px;
+  z-index: -1;
+  width: 5px;
+  height: 5px;
+  margin: auto;
+  border-radius: 50%;
+  animation: animate 10s linear infinite;
+}
+
+.wrapper span::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -10px;
+  right: -10px;
+  background-color: snow;
+  width: 15px;
+  height: 15px;
+  bottom: -10px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.wrapper span:nth-child(1) {
+  left: 60px;
+  width: 5px;
+  height: 5px;
+  animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+  left: 10%;
+  animation-delay: 3s;
+  width: 5px;
+  height: 5px;
+}
+
+.wrapper span:nth-child(3) {
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+  left: 30%;
+  animation-delay: 1s;
+  width: 5px;
+  height: 5px;
+}
+
+.wrapper span:nth-child(5) {
+  left: 40%;
+  animation-delay: 2.1s;
+}
+
+.wrapper span:nth-child(6) {
+  left: 50%;
+  animation-delay: 0.9s;
+}
+
+.wrapper span:nth-child(7) {
+  left: 60%;
+  animation-delay: 2.7s;
+  width: 5px;
+  height: 5px;
+}
+
+.wrapper span:nth-child(8) {
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.wrapper span:nth-child(10) {
+  right: 23%;
+  animation-delay: 3s;
+  height: 5px;
+  width: 5px;
+}
+.wrapper span:nth-child(11) {
+  right: 1%;
+  animation-delay: 1s;
+  height: 5px;
+  width: 5px;
+}
+.wrapper span:nth-child(12) {
+  right: 9%;
+  animation-delay: 3.5s;
+  height: 5px;
+  width: 5px;
+}
+.wrapper span:nth-child(13) {
+  right: 18%;
+  animation-delay: 2s;
+  height: 5px;
+  width: 5px;
+}
+.wrapper span:nth-child(14) {
+  animation-delay: 0.2s;
+  height: 5px;
+  width: 50px;
+}
+.wrapper span:nth-child(15) {
+  top: 0;
+  left: 100px;
+  animation-delay: 0.2s;
+  height: 5px;
+  width: 5px;
+}
+
+/* Continue styling for nth-child(10) and keyframes */
+
+/* Additional stars (1 to 10) */
+.wrapper span:nth-child(11),
+.wrapper span:nth-child(12),
+.wrapper span:nth-child(13),
+.wrapper span:nth-child(14),
+.wrapper span:nth-child(15),
+.wrapper span:nth-child(16),
+.wrapper span:nth-child(17),
+.wrapper span:nth-child(18),
+.wrapper span:nth-child(19),
+.wrapper span:nth-child(20) {
+  left: 70%;
+  animation-delay: 9s;
+}
+
+/* Continue styling for nth-child(21) to nth-child(1000) */
+/* ... */
+
+/* Additional stars (11 to 1000) */
+.wrapper span:nth-child(11),
+    .wrapper span:nth-child(12),
+    /* ... (Continue adding more stars) */
+    .wrapper span:nth-child(998),
+    .wrapper span:nth-child(999),
+    .wrapper span:nth-child(1000) {
+  left: 80%;
+  animation-delay: 10s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Keyframes for the glow effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  }
+}
